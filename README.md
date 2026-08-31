@@ -86,5 +86,4 @@ Settings → Pages → Source: **Deploy from a branch** → `main` → **/ (root
 
 ## Offene Punkte (zu ergänzen)
 
-- Standort/Adresse für die Karte (aktuell Basel-Ausschnitt).
 - Weitere Portfolio-Titel aus dem 55-Titel-Katalog.
