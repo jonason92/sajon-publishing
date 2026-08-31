@@ -69,9 +69,9 @@ sajon-publishing/
 
 ## Logo (Narwal)
 
-Das Logo ist ein inline-farbiges SVG in Smaragdgrün (`#0d7a52`). Für eine andere Farbe
-den Wert in `assets/narwhal.svg` ersetzen, oder das SVG per `currentColor` färben und
-die Farbe über CSS setzen.
+Das offizielle Logo ist der **originale Sajon-GmbH-Narwal** (`assets/logo.png`, Quelle:
+`Logo_pic.PNG` aus dem Plattform-Repo). Das zuvor verwendete, selbst erstellte
+Platzhalter-Logo bleibt aus historischen Gründen erhalten: `assets/narwhal.svg`.
 
 ## Verwendungsanleitung für andere SAJON-Sparten
 
@@ -86,6 +86,5 @@ Settings → Pages → Source: **Deploy from a branch** → `main` → **/ (root
 
 ## Offene Punkte (zu ergänzen)
 
-- **ORCID iD** (Kontaktseite, derzeit Platzhalter).
 - Standort/Adresse für die Karte (aktuell Basel-Ausschnitt).
 - Weitere Portfolio-Titel aus dem 55-Titel-Katalog.
