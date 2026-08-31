@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Portfolio · Sajon Publishing</title>
+<link rel="stylesheet" href="css/sajon-design-system.css" />
+<link rel="icon" href="assets/narwhal.svg" type="image/svg+xml" />
+
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html"><img src="assets/narwhal.svg" alt="Narwal-Logo" /> Sajon Publishing</a>
+    <nav class="nav-links">
+      <a href="index.html">Start</a>
+      <a href="leistungen.html">Leistungen</a>
+      <a href="ueber-uns.html">Über uns</a>
+      <a href="portfolio.html" class="active">Portfolio</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container" style="grid-template-columns:1fr">
+    <span class="eyebrow"><span class="star">✻</span> Das Verlagsprogramm</span>
+    <h1 style="font-size:clamp(1.8rem,4vw,2.6rem)">Portfolio</h1>
+    <p class="lead" style="max-width:60ch">Eine Auswahl verlegter und betreuter Titel — Spiritualität &amp; Weisheit, Astrologie, Heilung &amp; Ganzheit.</p>
+    <div class="ice-stripe"></div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="tabs">
+      <button class="tab active" data-cat="alle">Alle</button>
+      <button class="tab" data-cat="spiritualitaet">Spiritualität &amp; Weisheit</button>
+      <button class="tab" data-cat="astrologie">Astrologie</button>
+      <button class="tab" data-cat="heilung">Heilung &amp; Ganzheit</button>
+    </div>
+    <div class="grid">
+      <div class="book" data-cat="spiritualitaet"><img src="assets/covers/yogananda.jpg" alt="Autobiographie eines Yogi" /><div class="book-body"><h3>Autobiographie eines Yogi</h3><span class="author">Paramahansa Yogananda</span><div class="pub">O. W. Barth</div></div></div>
+      <div class="book" data-cat="spiritualitaet"><img src="assets/covers/krishnamurti_adler.jpg" alt="Der Flug des Adlers" /><div class="book-body"><h3>Der Flug des Adlers</h3><span class="author">Jiddu Krishnamurti</span><div class="pub">Fischer Taschenbuch</div></div></div>
+      <div class="book" data-cat="spiritualitaet"><img src="assets/covers/reden_buddha.jpg" alt="Die Reden des Buddha" /><div class="book-body"><h3>Die Reden des Buddha</h3><span class="author">Hermann Oldenberg</span><div class="pub">Herder</div></div></div>
+      <div class="book" data-cat="spiritualitaet"><img src="assets/covers/terzani.jpg" alt="Fliegen ohne Flügel" /><div class="book-body"><h3>Fliegen ohne Flügel</h3><span class="author">Tiziano Terzani</span><div class="pub">Goldmann</div></div></div>
+      <div class="book" data-cat="astrologie"><img src="assets/covers/ebertin.jpg" alt="Kombination der Gestirneinflüsse" /><div class="book-body"><h3>Kombination der Gestirneinflüsse</h3><span class="author">Reinhold Ebertin</span><div class="pub">Ebertin-Verlag</div></div></div>
+      <div class="book" data-cat="astrologie"><img src="assets/covers/moon_signs.jpg" alt="Moon Signs" /><div class="book-body"><h3>Moon Signs</h3><span class="author">Donna Cunningham</span><div class="pub">Droemer Knaur</div></div></div>
+      <div class="book" data-cat="heilung"><img src="assets/covers/wunder_heilung.jpg" alt="Wunder der Heilung" /><div class="book-body"><h3>Wunder der Heilung</h3><span class="author">Ulrich Strunz</span><div class="pub">Heyne</div></div></div>
+      <div class="book" data-cat="heilung"><img src="assets/covers/selbstheilung.jpg" alt="Krankheit als Selbstheilung" /><div class="book-body"><h3>Krankheit als Selbstheilung</h3><span class="author">Beck</span><div class="pub">Suhrkamp</div></div></div>
+    </div>
+  </div>
+</section>
+
+<script>
+var tabs = document.querySelectorAll('.tab');
+var books = document.querySelectorAll('.book');
+tabs.forEach(function(t){
+  t.addEventListener('click', function(){
+    tabs.forEach(function(x){ x.classList.remove('active'); });
+    t.classList.add('active');
+    var cat = t.getAttribute('data-cat');
+    books.forEach(function(b){
+      b.style.display = (cat === 'alle' || b.getAttribute('data-cat') === cat) ? '' : 'none';
+    });
+  });
+});
+</script>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Sajon Publishing</h4>
+        <p>Der Verlagsteil der Sajon GmbH — akademische, qualitativ hochstehende Schriften: Editieren, Gestalten, Lektorieren, Konvertieren und Veröffentlichen.</p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Start</a></li>
+          <li><a href="leistungen.html">Leistungen</a></li>
+          <li><a href="ueber-uns.html">Über uns</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <ul>
+          <li><a href="mailto:jonason@protonmail.ch">jonason@protonmail.ch</a></li>
+          <li>Schweiz</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="stars">✻✻✻✻✻</span><br />
+      © 2026 Sajon Publishing · Sajon GmbH
+    </div>
+  </div>
+</footer>
+</body>
+</html>
